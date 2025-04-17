@@ -1,10 +1,10 @@
 # Keeper App - Primeira Parte
 
-![Exemplo de execução](/image/image.png)
+![Exemplo de execução](/image/image.gif)
 
 ---
 
-Este é meu primeiro projeto com React, inspirado no Google Keep. Atualmente, o projeto está na primeira parte do desenvolvimento, com uma estrutura inicial de componentes e estilização básica.
+Este é meu primeiro projeto com React, inspirado no Google Keep. O projeto está na primeira parte do desenvolvimento, com foco em componentização, manipulação de estado e funcionalidades básicas como criação e exclusão de notas.
 
 
 ## 🚀 Tecnologias Utilizadas
@@ -25,20 +25,28 @@ Este é meu primeiro projeto com React, inspirado no Google Keep. Atualmente, o 
 📁 src
  ├── 📂 components
  │   ├── Header.jsx
- │   ├── Note.jsx
  │   ├── Footer.jsx
+ │   ├── Note.jsx
+ │   ├── InputArea.jsx
+ ├── 📂 style
+ │   ├── App.css
+ │   ├── Header.css
+ │   ├── Footer.css
+ │   ├── Note.css
+ │   ├── InputArea.css
+ |   ├── index.css
+ |   ├── reset.css
  ├── App.jsx
  ├── main.jsx
- ├── index.css
- ├── reset.css
+
 ```
 
 ## 🛠 Como Executar o Projeto
 
 ### 1️⃣ Clone o repositório
 ```sh
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/Kiy0p0N/keeper-app.git
+cd keeper-app
 ```
 
 ### 2️⃣ Instale as dependências
@@ -52,10 +60,10 @@ npm run dev
 ```
 
 ## 📌 Próximos Passos
-
-- Implementar um sistema de adição e remoção de notas
-- Melhorar o design com CSS e componentes mais dinâmicos
-- Adicionar estado aos componentes
+- Corrigir possíveis conflitos de ID em useState
+- Melhorar responsividade e design da interface
+- Adicionar feedback visual para criação e exclusão de notas
+- Implementar persistência de dados com localStorage ou backend
 
 ---
 💡 Projeto em desenvolvimento! Sinta-se à vontade para contribuir. 😊

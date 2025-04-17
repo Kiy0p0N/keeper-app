@@ -1,0 +1,33 @@
+.note {
+    width: 260px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px #ccc;
+}
+
+.note h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.note p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.delete-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.delete-container button {
+    color: #f5ba13;
+}
+
+.delete-container button:hover {
+    opacity: 0.8;
+}

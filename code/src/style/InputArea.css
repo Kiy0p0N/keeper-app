@@ -1,0 +1,46 @@
+.input-container {
+    width: 100%;
+    height: auto;
+    justify-items: center;
+}
+
+.input-area {
+    width: auto;
+    height: auto;
+    padding: 15px;
+    box-shadow: 0 0 2px 2px #00000020;
+    border-radius: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+    font-size: 1.2em;
+    font-family: inherit;
+    resize: none;
+    word-wrap: break-word;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.button button {
+    width: 45px;
+    height: 45px;
+    background-color: #f5ba13;
+    color: white;
+    border-radius: 100%;
+    position: relative;
+    bottom: -30px;
+    text-align: center;
+}
+
+.button button:hover {
+    opacity: 0.8;
+}
