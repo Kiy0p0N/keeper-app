@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import '../style/InputArea.css';
+import AddIcon from '@mui/icons-material/Add';
+import Fab from '@mui/material/Fab';
+import Zoom from '@mui/material/Zoom';
 
 function InputArea(props) {
     // Local state to store the current note input
@@ -7,6 +10,11 @@ function InputArea(props) {
         title: "",
         content: "",
     });
+    const [isExpanded, setIsExpanded] = useState(false)
+
+    function expandInput() {
+        setIsExpanded(true);
+    }
 
     // Handle changes in input fields and update corresponding state
     function handleChange(event) {
@@ -33,7 +41,7 @@ function InputArea(props) {
             <form className="input-area">
                 {/* Input for the note's title */}
                 <input 
-                    type="text" 
+                    type={isExpanded ? "text" : "hidden"} 
                     name="title" 
                     placeholder="Title" 
                     value={note.title} 
@@ -47,16 +55,17 @@ function InputArea(props) {
                     name="content" 
                     placeholder="Take a note..." 
                     value={note.content} 
-                    onChange={handleChange} 
-                    rows={3} 
+                    onChange={handleChange}
+                    onClick={expandInput}
+                    rows={isExpanded ? 3 : 1} 
                 />
                 
                 {/* Button to trigger note creation */}
-                <div className="button">
-                    <button type="submit" onClick={onCreate}>
-                        Add
-                    </button>
-                </div>
+                <Zoom in={isExpanded}>
+                    <Fab type="submit" onClick={onCreate}>
+                        <AddIcon />
+                    </Fab>
+                </Zoom>
             </form>
         </div>
     );

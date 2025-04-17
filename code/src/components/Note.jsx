@@ -1,4 +1,5 @@
 import '../style/Note.css';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function Note(props) {
     // Trigger delete callback passed from parent with this note's ID
@@ -17,7 +18,7 @@ function Note(props) {
             {/* Delete button triggers onDelete handler */}
             <div className="delete-container">
                 <button onClick={onDelete}>
-                    Delete
+                    <DeleteIcon />
                 </button>
             </div>
         </div>

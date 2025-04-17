@@ -5,11 +5,13 @@
 }
 
 .input-area {
-    width: auto;
-    height: auto;
+    position: relative;
+    width: 480px;
+    margin: 30px auto 20px auto;
+    background: #fff;
     padding: 15px;
-    box-shadow: 0 0 2px 2px #00000020;
-    border-radius: 5px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
 
 input,
@@ -24,21 +26,19 @@ textarea {
     word-wrap: break-word;
 }
 
-.button {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
-
-.button button {
-    width: 45px;
-    height: 45px;
-    background-color: #f5ba13;
-    color: white;
-    border-radius: 100%;
-    position: relative;
-    bottom: -30px;
-    text-align: center;
+.input-area button {
+    position: absolute;
+    right: 18px;
+    bottom: -18px;
+    background: #f5ba13;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
 }
 
 .button button:hover {
