@@ -5,41 +5,44 @@ import Fab from '@mui/material/Fab';
 import Zoom from '@mui/material/Zoom';
 
 function InputArea(props) {
-    // Local state to store the current note input
+    // State to store current note input
     const [note, setNote] = useState({
         title: "",
         content: "",
     });
-    const [isExpanded, setIsExpanded] = useState(false)
 
+    // State to control input expansion
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    // Expands input area when user clicks on textarea
     function expandInput() {
         setIsExpanded(true);
     }
 
-    // Handle changes in input fields and update corresponding state
+    // Updates note state when user types
     function handleChange(event) {
         const { name, value } = event.target;
 
         setNote((prevNote) => {
             return {
                 ...prevNote,
-                [name]: value // Dynamically update either title or content
+                [name]: value // Update title or content dynamically
             };
         });
     }
 
-    // Trigger the addNote function and reset input fields
+    // Adds note and clears the form
     function onCreate(event) {
-        event.preventDefault(); // Prevent form from submitting/reloading the page
+        event.preventDefault(); // Prevent default form submission
 
-        props.addNote(note); // Call parent function to add new note
-        setNote({ title: "", content: "" }); // Clear input fields after adding
+        props.addNote(note); // Send note to parent
+        setNote({ title: "", content: "" }); // Clear inputs
     }
 
     return (
         <div className="input-container">
             <form className="input-area">
-                {/* Input for the note's title */}
+                {/* Title input - visible only when expanded */}
                 <input 
                     type={isExpanded ? "text" : "hidden"} 
                     name="title" 
@@ -49,7 +52,7 @@ function InputArea(props) {
                     maxLength={20} 
                 />
 
-                {/* Textarea for the note's content */}
+                {/* Content input - triggers expansion on click */}
                 <textarea 
                     type="text" 
                     name="content" 
@@ -60,7 +63,7 @@ function InputArea(props) {
                     rows={isExpanded ? 3 : 1} 
                 />
                 
-                {/* Button to trigger note creation */}
+                {/* Submit button with animation and Material icon */}
                 <Zoom in={isExpanded}>
                     <Fab type="submit" onClick={onCreate}>
                         <AddIcon />

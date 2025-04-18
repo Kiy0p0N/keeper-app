@@ -5,7 +5,7 @@ function Header() {
     return (
         // Main header element
         <header>
-            {/* App title */}
+            {/* App title with Material UI icon */}
             <h1 className="header-title">
                 <HighlightIcon />
                 Keeper
